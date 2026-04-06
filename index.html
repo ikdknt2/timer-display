@@ -53,6 +53,26 @@ body {
   top: 50px;
 }
 
+  .time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: 'DS-Digital', monospace;
+  font-size: 120px;
+
+  color: #eaeaea; /* 真っ白じゃないのがポイント */
+
+  letter-spacing: 10px;
+}
+
+@font-face {
+  font-family: 'DS-Digital';
+  src: url('DS-DIGI.TTF') format('truetype');
+}
+③ タイム表示を作る
+  
 </style>
 
 </head>
@@ -60,7 +80,9 @@ body {
 <div class="wrapper">
     <div class="stand"></div>
     <div class="outer">
-        <div class="inner"></div>
+        <div class="inner">
+            <div class="time" id="time">12.34</div>
+        </div>
     </div>
 </div>
 
