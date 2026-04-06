@@ -9,4 +9,8 @@ function formatFixed(ms) {
   return `${minutes}:${seconds}.${decimal}`;
 }
 
+var url = location.search;
+document.getElementById("urlparam").innerHTML = url;
+console.log(url)
+
 window.formatFixed(ms)
