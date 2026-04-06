@@ -1,0 +1,47 @@
+```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>G5 Display Base</title>
+
+<style>
+body {
+  background: #ddd;
+  margin: 0;
+}
+
+/* 青い楕円（外側） */
+.outer {
+  width: 820px;
+  height: 200px;
+  margin: 100px auto;
+
+  background: linear-gradient(to bottom, #2f8cff, #1a5fbf);
+  border-radius: 50% / 35%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 黒い楕円（内側） */
+.inner {
+  width: 760px;
+  height: 150px;
+
+  background: linear-gradient(to bottom, #555, #222);
+  border-radius: 50% / 35%;
+}
+</style>
+
+</head>
+<body>
+
+<div class="outer">
+  <div class="inner"></div>
+</div>
+
+</body>
+</html>
+```
