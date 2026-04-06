@@ -10,35 +10,58 @@ body {
   margin: 0;
 }
 
+/* 全体をまとめる */
+.wrapper {
+  width: 760px;
+  height: 400px;
+  margin: 100px auto;
+  position: relative;
+}
+
 /* 青い楕円（外側） */
 .outer {
-  width: 820px;
+  width: 760px;
   height: 300px;
-  margin: 100px auto;
 
   background: linear-gradient(to bottom, #2f8cff, #1a5fbf);
-  border-radius: 50% / 35%;
+  border-radius: 50%;
 
   display: flex;
   align-items: center;
   justify-content: center;
+
+  position: relative;
 }
 
 /* 黒い楕円（内側） */
 .inner {
-  width: 760px;
-  height: 150px;
+  width: 700px;
+  height: 240px;
 
   background: linear-gradient(to bottom, #555, #222);
-  border-radius: 50% / 35%;
+  border-radius: 50%;
 }
+
+.stand {
+  width: 70px;
+  height: 500px;
+  background: linear-gradient(#222, #000);
+  border-radius: 12px;
+  position: absolute;
+  left: 47%;
+  z-index: -1;
+  top: 50px;
+}
+
 </style>
 
 </head>
 <body>
-
-<div class="outer">
-  <div class="inner"></div>
+<div class="wrapper">
+    <div class="stand"></div>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
 </div>
 
 </body>
