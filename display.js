@@ -18,8 +18,8 @@ function getParams() {
 function updateDisplay() {
   const {id} = getParams();
 
-  // idチェック（5桁数字のみ）
-  if (!id || !/^\d{5}$/.test(id)) return;
+  // idチェック（6桁数字のみ）
+  if (!id || !/^\d{6}$/.test(id)) return;
 
   let text = formatFixed(Number(id));
 
