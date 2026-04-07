@@ -1,10 +1,8 @@
 // ===== フォーマット =====
 function formatFixed(ms) {
-  const cs = Math.floor(ms / 10); // センチ秒
-  const s = String(cs);
+  const s = String(ms).padStart(6, "0");
 
-  // 5桁前提
-  return `${s[0]}:${s.slice(1,3)}.${s.slice(3,5)}`;
+  return `${s[0]}:${s.slice(1,3)}.${s.slice(3,6)}`;
 }
 
 // ===== URLから取得 =====
