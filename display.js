@@ -12,26 +12,18 @@ function getParams() {
   const params = new URLSearchParams(window.location.search);
 
   return {
-    id: params.get("id"),
-    penalty: params.get("penalty") // 例: +2 / DNF
+    id: params.get("id")
   };
 }
 
 // ===== 表示更新 =====
 function updateDisplay() {
-  const { id, penalty } = getParams();
+  const {id} = getParams();
 
   // idチェック（5桁数字のみ）
   if (!id || !/^\d{5}$/.test(id)) return;
 
   let text = formatFixed(Number(id));
-
-  // ペナルティ処理
-  if (penalty === "+2") {
-    text += "+";
-  } else if (penalty === "DNF") {
-    text = "DNF";
-  }
 
   document.getElementById("time").textContent = text;
 }
