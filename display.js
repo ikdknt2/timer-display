@@ -1,16 +1,40 @@
+// ===== フォーマット =====
 function formatFixed(ms) {
   const cs = Math.floor(ms / 10); // センチ秒
-  const str = String(cs); // 5桁前提
+  const s = String(cs);
 
-  const minutes = str.slice(0, 1);
-  const seconds = str.slice(1, 3);
-  const decimal = str.slice(3, 5);
-
-  return `${minutes}:${seconds}.${decimal}`;
+  // 5桁前提
+  return `${s[0]}:${s.slice(1,3)}.${s.slice(3,5)}`;
 }
 
-var url = location.search;
-document.getElementById("urlparam").innerHTML = url;
-console.log(url)
+// ===== URLから取得 =====
+function getParams() {
+  const params = new URLSearchParams(window.location.search);
 
-window.formatFixed(ms)
+  return {
+    id: params.get("id"),
+    penalty: params.get("penalty") // 例: +2 / DNF
+  };
+}
+
+// ===== 表示更新 =====
+function updateDisplay() {
+  const { id, penalty } = getParams();
+
+  // idチェック（5桁数字のみ）
+  if (!id || !/^\d{5}$/.test(id)) return;
+
+  let text = formatFixed(Number(id));
+
+  // ペナルティ処理
+  if (penalty === "+2") {
+    text += "+";
+  } else if (penalty === "DNF") {
+    text = "DNF";
+  }
+
+  document.getElementById("time").textContent = text;
+}
+
+// ===== 初期実行 =====
+window.onload = updateDisplay;
