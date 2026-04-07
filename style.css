@@ -64,3 +64,7 @@ body {
   font-family: 'DS-Digital';
   src: url('DS-DIGIB.TTF') format('truetype');
 }
+
+.time {
+  white-space: nowrap;
+}
