@@ -25,6 +25,13 @@ function updateDisplay() {
 
   document.getElementById("sec1").textContent = s1;
   document.getElementById("ms").textContent = msPart;
+
+  const colon = document.getElementById("colon");
+  if (m === "0") {
+    colon.style.visibility = "hidden";
+  } else {
+    colon.style.visibility = "visible";
+  }
 }
 
 // ===== 初期実行 =====
