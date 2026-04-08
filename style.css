@@ -3,6 +3,11 @@ body {
   margin: 0;
 }
 
+:root {
+  /* タイム表示の左右オフセット（負の値で左へ、正の値で右へ） */
+  --time-offset-x: -24px;
+}
+
 /* 全体をまとめる */
 .wrapper {
   width: 760px;
@@ -50,7 +55,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + var(--time-offset-x)), -50%);
 
   font-family: 'DS-Digital', monospace;
   font-size: 150px;
