@@ -1,36 +1,30 @@
-function formatFixed(ms) {
-  const s = String(ms).padStart(6, "0");
+// ===== URL取得 =====
+function getParams() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
+
+// ===== 表示更新 =====
+function updateDisplay() {
+  const id = getParams();
+
+  if (!id || !/^\d{6}$/.test(id)) return;
+
+  const s = String(id).padStart(6, "0");
 
   const m = s[0];
   const s10 = s[1];
   const s1 = s[2];
   const msPart = s.slice(3, 6);
 
-  const min = (m === "0" ? " " : m);
-  const sec = (s10 === "0" ? " " : s10) + s1;
+  document.getElementById("min").textContent =
+    (m === "0" ? " " : m);
 
-  return `${min}:${sec}.${msPart}`;
-}
+  document.getElementById("sec10").textContent =
+    (s10 === "0" ? " " : s10);
 
-// ===== URLから取得 =====
-function getParams() {
-  const params = new URLSearchParams(window.location.search);
-
-  return {
-    id: params.get("id")
-  };
-}
-
-// ===== 表示更新 =====
-function updateDisplay() {
-  const {id} = getParams();
-
-  // idチェック（6桁数字のみ）
-  if (!id || !/^\d{6}$/.test(id)) return;
-
-  let text = formatFixed(Number(id));
-
-  document.getElementById("time").textContent = text;
+  document.getElementById("sec1").textContent = s1;
+  document.getElementById("ms").textContent = msPart;
 }
 
 // ===== 初期実行 =====
