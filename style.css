@@ -68,3 +68,32 @@ body {
 .time {
   white-space: nowrap;
 }
+
+
+.time {
+  display: flex;              /* ← 追加 */
+  justify-content: center;    /* ← 追加 */
+  align-items: center;        /* ← 追加 */
+
+  font-variant-numeric: tabular-nums; /* ← 追加 */
+}
+
+/* 桁ごとの固定幅 */
+#min, #sec10, #sec1 {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+}
+
+#ms {
+  display: inline-block;
+  width: 180px;
+  text-align: left;
+}
+
+/* : と . */
+.time span:not(#min):not(#sec10):not(#sec1):not(#ms) {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
