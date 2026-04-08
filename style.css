@@ -16,7 +16,7 @@ body {
   width: 750px;
   height: 300px;
 
-  background: linear-gradient(to bottom, #2f8cff, #1a5fbf);
+  background:#3c6fab;
   border-radius: 50%;
 
   display: flex;
@@ -31,7 +31,7 @@ body {
   width: 720px;
   height: 270px;
 
-  background: linear-gradient(to bottom, #555, #222);
+  background:＃303437;
   border-radius: 50%;
 }
 
