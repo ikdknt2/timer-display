@@ -57,7 +57,7 @@ body {
 
   color: #ff1b5a; /* 真っ白じゃないのがポイント */
 
-  letter-spacing: 10px;
+  /* letter-spacing: 10px; */
 }
 
 @font-face {
