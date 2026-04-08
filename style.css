@@ -3,6 +3,13 @@ body {
   margin: 0;
 }
 
+:root {
+  /* タイム表示の左右オフセット（負の値で左へ、正の値で右へ） */
+  --time-offset-x: -24px;
+  /* タイム表示サイズ */
+  --time-font-size: 150px;
+}
+
 /* 全体をまとめる */
 .wrapper {
   width: 760px;
@@ -50,10 +57,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(calc(-50% + var(--time-offset-x)), -50%);
 
   font-family: 'DS-Digital', monospace;
-  font-size: 150px;
+  font-size: var(--time-font-size);
 
   color: #ff1b5a; /* 真っ白じゃないのがポイント */
 
@@ -81,19 +88,19 @@ body {
 /* 桁ごとの固定幅 */
 #min, #sec10, #sec1 {
   display: inline-block;
-  width: 70px;
+  width: calc(var(--time-font-size) * 0.4667);
   text-align: center;
 }
 
 #ms {
   display: inline-block;
-  width: 180px;
+  width: calc(var(--time-font-size) * 1.2);
   text-align: left;
 }
 
 /* : と . */
 .time span:not(#min):not(#sec10):not(#sec1):not(#ms) {
   display: inline-block;
-  width: 40px;
+  width: calc(var(--time-font-size) * 0.2667);
   text-align: center;
 }

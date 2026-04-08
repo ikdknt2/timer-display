@@ -1,14 +1,38 @@
 // ===== URL取得 =====
 function getParams() {
   const params = new URLSearchParams(window.location.search);
-  return params.get("id");
+  return {
+    id: params.get("id"),
+    offsetX: params.get("offsetX"),
+    fontSize: params.get("fontSize"),
+  };
 }
 
 // ===== 表示更新 =====
 function updateDisplay() {
-  const id = getParams();
+  const { id, offsetX, fontSize } = getParams();
 
   if (!id || !/^\d{6}$/.test(id)) return;
+
+  if (offsetX !== null) {
+    const parsedOffset = Number(offsetX);
+    if (!Number.isNaN(parsedOffset)) {
+      document.documentElement.style.setProperty(
+        "--time-offset-x",
+        `${parsedOffset}px`
+      );
+    }
+  }
+
+  if (fontSize !== null) {
+    const parsedFontSize = Number(fontSize);
+    if (!Number.isNaN(parsedFontSize) && parsedFontSize > 0) {
+      document.documentElement.style.setProperty(
+        "--time-font-size",
+        `${parsedFontSize}px`
+      );
+    }
+  }
 
   const s = String(id).padStart(6, "0");
 
