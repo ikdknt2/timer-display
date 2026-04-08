@@ -13,8 +13,8 @@ body {
 
 /* 青い楕円（外側） */
 .outer {
-  width: 760px;
-  height: 320px;
+  width: 750px;
+  height: 300px;
 
   background: linear-gradient(to bottom, #2f8cff, #1a5fbf);
   border-radius: 50%;
@@ -28,8 +28,8 @@ body {
 
 /* 黒い楕円（内側） */
 .inner {
-  width: 700px;
-  height: 260px;
+  width: 720px;
+  height: 270px;
 
   background: linear-gradient(to bottom, #555, #222);
   border-radius: 50%;
