@@ -58,7 +58,7 @@ body {
   transform: translate(calc(-50% + var(--time-offset-x)), -50%);
 
   font-family: 'DS-Digital', monospace;
-  font-size: 180px;
+  font-size: 150px;
 
   color: #ff1b5a; /* 真っ白じゃないのがポイント */
 
