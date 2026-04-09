@@ -57,7 +57,7 @@ body {
   left: 50%;
   transform: translate(calc(-50% + var(--time-offset-x)), -50%);
 
-  font-family: 'DS-Digital', monospace;
+  font-family: 'DS-Digital7MonoItalic', monospace;
   font-size: 150px;
 
   color: #ff1b5a; /* 真っ白じゃないのがポイント */
@@ -66,6 +66,7 @@ body {
 }
 
 @font-face {
+  font-family: 'Digital7MonoItalic';
   src: url('Digital7Monoitalic.TTF') format('truetype');
 }
 
