@@ -66,8 +66,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Digital7Monoitalic';
-  src: url('DS-DIGII.TTF') format('truetype');
+  font-family: 'Digital7Monoitalic.ttf';
+  src: url('Digital7Monoitalic.ttf') format('truetype');
 }
 
 .time {
