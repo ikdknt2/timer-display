@@ -97,10 +97,14 @@ body {
 
 #colon {
   width: 50px;
+  font-family: 'Digital7Italic';
+  src: url('Digital7italic.TTF') format('truetype');
 }
 
 #dot {
   width: 30px;
+  font-family: 'Digital7Italic';
+  src: url('Digital7italic.TTF') format('truetype');
 }
 
 /* : と . */
