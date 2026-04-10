@@ -67,6 +67,9 @@ body {
 @font-face {
   font-family: 'Digital7MonoItalic';
   src: url('Digital7Monoitalic.TTF') format('truetype');
+  
+  font-family: 'Digital7Italic';
+  src: url('Digital7italic.TTF') format('truetype');
 }
 
 .time {
@@ -98,13 +101,11 @@ body {
 #colon {
   width: 50px;
   font-family: 'Digital7Italic';
-  src: url('Digital7italic.TTF') format('truetype');
 }
 
 #dot {
   width: 30px;
   font-family: 'Digital7Italic';
-  src: url('Digital7italic.TTF') format('truetype');
 }
 
 /* : と . */
