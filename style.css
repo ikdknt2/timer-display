@@ -67,7 +67,9 @@ body {
 @font-face {
   font-family: 'Digital7MonoItalic';
   src: url('Digital7Monoitalic.TTF') format('truetype');
-  
+}
+
+@font-face{
   font-family: 'Digital7Italic';
   src: url('Digital7italic.TTF') format('truetype');
 }
