@@ -12,7 +12,6 @@ body {
 .wrapper {
   width: 760px;
   height: 400px;
-  margin: 100px auto;
   position: relative;
 }
 
@@ -62,7 +61,7 @@ body {
 
   color: #ff1b5a; /* 真っ白じゃないのがポイント */
 
-  /* letter-spacing: 10px; */
+  letter-spacing: 10px;
 }
 
 @font-face {
@@ -86,7 +85,7 @@ body {
 /* 桁ごとの固定幅 */
 #min, #sec10, #sec1 {
   display: inline-block;
-  width: 70px;
+  width: 65px;
   text-align: center;
 }
 
@@ -96,9 +95,12 @@ body {
   text-align: left;
 }
 
+#colon {
+  width: 50px;
+}
+
 /* : と . */
 .time span:not(#min):not(#sec10):not(#sec1):not(#ms) {
   display: inline-block;
-  width: 30px;
   text-align: center;
 }
