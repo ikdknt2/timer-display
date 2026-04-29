@@ -34,8 +34,8 @@ body {
 .inner {
   width: 720px;
   height: 270px;
-
-  background:#303437;
+/* background:#303437; */
+ background:#ffffff; 
   border-radius: 50%;
 }
 
